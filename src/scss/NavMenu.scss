@@ -1,0 +1,42 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+.pages-navigation {
+  background-color: white;
+  .nav-link {
+    padding: 5px 10px !important;
+    display: flex !important;
+    font-family: "Roboto", sans-serif;
+    color: v.$color-darkgreen !important;
+    position: relative;
+
+    &.active {
+      color: v.$color-darkgreen !important;
+    }
+
+    @include m.tablet {
+      color: v.$color-darkgreen !important;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 0;
+      background-color: v.$color-beige;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transition: width 0.2s ease;
+    }
+
+    &:hover:before {
+      width: 100%;
+    }
+
+    &:hover {
+      color: v.$color-darkgreen;
+      transition: color 0.5s ease;
+    }
+  }
+}

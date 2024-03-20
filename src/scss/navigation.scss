@@ -1,0 +1,150 @@
+@use "_mixins" as m;
+@use "_variables" as v;
+
+.header__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header__video__wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: none;
+
+  @include m.tablet {
+    display: block;
+  }
+}
+
+.header__restaurantName__wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__restaurantName {
+  color: v.$color-beige;
+  font-family: "Arizonia", cursive;
+  font-size: 4rem;
+  text-shadow: 0px 0px 10px black;
+}
+
+.navbar-brand {
+  font-size: 2rem !important;
+  font-family: "Arizonia", cursive;
+  color: v.$color-darkgreen !important;
+  font-weight: bold;
+
+  @include m.tablet {
+    display: none;
+  }
+}
+
+.navbar-expand-lg .navbar-collapse {
+  justify-content: flex-end;
+}
+
+.navbar-expand-lg .navbar-nav {
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-nav {
+  .nav-link {
+    padding: 5px 10px !important;
+    display: flex !important;
+    font-family: "Roboto", sans-serif;
+    color: v.$color-darkgreen;
+    position: relative;
+
+    &.active {
+      color: v.$color-darkgreen !important;
+      @include m.tablet {
+        color: white !important;
+      }
+    }
+
+    @include m.tablet {
+      color: white;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 0;
+      background-color: v.$color-beige;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transition: width 0.2s ease;
+    }
+
+    &:hover:before {
+      width: 100%;
+    }
+
+    &:hover {
+      color: v.$color-darkgreen;
+      transition: color 0.5s ease;
+      @include m.tablet {
+        color: white;
+      }
+    }
+  }
+}
+.bg-body-tertiary-custom {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.btn-outline-success {
+  padding: 5px 15px !important;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: v.$color-white;
+  transition: background-color 0.5s ease;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+
+  &:hover {
+    background-color: v.$color-darkgreen;
+    color: v.$color-white !important;
+  }
+}
+
+.navbar-collapse.collapse.show {
+  justify-content: center;
+  align-items: center;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-around;
+}
+.navbar {
+  transition: all 0.3s ease;
+  @include m.tablet {
+    background-color: transparent;
+  }
+  background-color: white;
+}
+.navbar-scrolled {
+  @include m.tablet {
+    background-color: rgb(255, 255, 255);
+    .nav-link {
+      color: black !important;
+      &.active {
+        @include m.tablet {
+          color: rgb(0, 0, 0) !important;
+        }
+      }
+    }
+  }
+}

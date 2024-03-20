@@ -1,0 +1,78 @@
+@use "_variables" as v;
+.AdminAddContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  
+    h2 {
+      margin-bottom: 20px;
+    }
+  
+    button {
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: v.$color-darkgreen;
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: v.$color-white;
+        color: v.$color-darkgreen;
+        transition: 0.4s;
+      }
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      div {
+        margin-bottom: 20px;
+        text-align: center;
+  
+        label {
+          display: block;
+          margin-bottom: 5px;
+        }
+  
+        input {
+          width: 100%;
+          padding: 8px;
+          font-size: 16px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+        }
+      }
+  
+      button[type="submit"] {
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        background-color: v.$color-darkgreen;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+            background-color: v.$color-white;
+            color: v.$color-darkgreen;
+            transition: 0.4s;
+        }
+      }
+    }
+  
+    @media (min-width: 768px) {
+      align-items: initial;
+    }
+  }
+  

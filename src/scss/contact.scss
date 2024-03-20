@@ -1,0 +1,36 @@
+@use "_mixins" as m;
+@use "_variables" as v;
+
+.contact {
+  margin-top: 45px;
+  @include m.flex(column, center, center);
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+
+  &__header {
+    font-family: "DM Serif Display", serif;
+    color: v.$color-darkgreen;
+    margin: 30px;
+    padding: 10px;
+    border-bottom: 1px solid v.$color-darkgreen;
+  }
+
+  &__container {
+    @include m.flex(column, center, center);
+    gap: 25px;
+  }
+
+  &__address,
+  &__phone,
+  &__email,
+  &__open {
+    @include m.flex(column, center, center);
+    &-title {
+      color: v.$color-darkgreen;
+    }
+    &-link {
+      color: black;
+      text-decoration: none;
+    }
+  }
+}

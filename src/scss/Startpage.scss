@@ -1,0 +1,200 @@
+@use "_mixins" as m;
+@use "_variables" as v;
+
+.startpage__menu {
+  @include m.flex-justify(column, center);
+
+  @include m.tablet {
+    flex-direction: row;
+  }
+
+  &__info__wrapper {
+    @include m.flex(column, center, center);
+    background-color: v.$color-beige;
+    padding: 20px;
+    margin: 5px;
+
+    height: 400px;
+    @include m.tablet{
+      margin-top: 5px;
+    }
+    margin-top: 70px;
+
+
+    @include m.tablet {
+      width: 60%;
+    }
+  }
+
+  &__title {
+    margin: 20px;
+    font-family: "DM Serif Display", serif;
+  }
+
+  &__info {
+    font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+  }
+
+  &__button {
+    border: 1px solid #283618;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: v.$color-white;
+    width: 100px;
+    margin-top: 20px;
+    font-family: "Roboto", sans-serif;
+
+    @include m.tablet {
+      cursor: pointer;
+
+      &:hover {
+        background-color: v.$color-darkgreen;
+        color: v.$color-white;
+        transition: 0.4s;
+      }
+    }
+  }
+
+  &__picture {
+    background-image: url("./../assets/carbonara.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    margin: 5px;
+
+    @include m.tablet {
+      @include m.size(400px, 40%);
+    }
+  }
+}
+
+.startpage__restaurant {
+  display: flex;
+  flex-direction: column;
+
+  @include m.tablet {
+    flex-direction: row;
+  }
+
+  &__picture-first {
+    background-image: url("./../assets/cooking.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    margin: 5px;
+
+    @include m.tablet {
+      @include m.tablet {
+        @include m.size(400px, 35%);
+      }
+    }
+  }
+
+  &__info__wrapper {
+    @include m.flex(column, center, center);
+
+    background-color: v.$color-white;
+    margin: 5px;
+    padding: 20px;
+
+    @include m.tablet {
+      @include m.tablet {
+        @include m.size(400px, 35%);
+      }
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-family: "DM Serif Display", serif;
+    margin-bottom: 20px;
+  }
+
+  &__info {
+    font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+  }
+
+  &__picture-second {
+    background-image: url("./../assets/fish.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    margin: 5px;
+
+    @include m.tablet {
+      @include m.tablet {
+        @include m.size(400px, 35%);
+      }
+    }
+  }
+}
+
+.startpage__booking {
+  display: flex;
+  flex-direction: column;
+
+  @include m.tablet {
+    flex-direction: row;
+  }
+
+  &__picture {
+    background-image: url("./../assets/seafoodPasta.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    margin: 5px;
+
+    @include m.tablet {
+      @include m.tablet {
+        @include m.size(400px, 90%);
+      }
+    }
+  }
+
+  &__info__wrapper {
+    @include m.flex(column, center, center);
+
+    background-color: v.$color-beige;
+    margin: 5px;
+    padding: 20px;
+
+    @include m.tablet {
+      height: 400px;
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-family: "DM Serif Display", serif;
+  }
+
+  &__info {
+    font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+  }
+
+  &__button {
+    border: 1px solid v.$color-darkgreen;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: v.$color-white;
+    width: 100px;
+    margin-top: 30px;
+    font-family: "Roboto", sans-serif;
+
+    @include m.tablet {
+      cursor: pointer;
+
+      &:hover {
+        background-color: v.$color-darkgreen;
+        color: v.$color-white;
+        transition: 0.4s;
+      }
+    }
+  }
+}

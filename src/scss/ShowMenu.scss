@@ -1,0 +1,58 @@
+@use "_mixins" as m;
+@use "_variables" as v;
+
+.menu {
+  padding: 35px;
+  margin-top: 40px;
+
+  &__title {
+    text-align: center;
+    font-family: "DM Serif Display", serif;
+    border-bottom: 1px solid rgb(156, 157, 156);
+    padding-bottom: 10px;
+    margin-top: 20px;
+
+    @include m.tablet {
+      margin: 40px 0px 25px 0px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__wrapper-antipasti,
+  &__wrapper-primi,
+  &__wrapper-secondi,
+  &__wrapper-dolci {
+    @include m.flex-align(column, center);
+    font-size: 0.5rem;
+
+    @include m.tablet {
+      font-size: 1rem;
+    }
+  }
+
+  &__title-antipasti,
+  &__title-primi,
+  &__title-secondi,
+  &__title-dolci {
+    font-family: "Cedarville Cursive", cursive;
+    margin: 20px;
+  }
+
+  &__text-food {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+  }
+
+  &__text-allergies {
+    font-weight: 500;
+    font-size: 0.5rem;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    margin-top: 10px;
+
+    @include m.tablet {
+      font-size: 1rem;
+      margin-top: 20px;
+    }
+  }
+}
